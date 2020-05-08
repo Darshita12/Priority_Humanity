@@ -1,0 +1,345 @@
+/***
+* write layout scss here
+*/
+
+* {
+    @include margin(0);
+    @include padding(0);
+    font-family: $regular-font;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.banner {
+    height: 100vh;
+    background-image: url("../img/bannerbg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .banner-wrapper {
+        color: $white-color;
+        max-width: 500px;
+        h2 {
+            font-size: 50px;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+// payment model
+.modal {
+
+    .payment-info {
+        background-color: $white-color;
+        
+        h5 {
+            border: 1px solid;
+            @include margin(0 20px);
+        }
+    }
+}
+
+.information {
+    @include paddingTop(70px);
+    
+    .col-md-4 {
+        &:nth-child(2) {
+            .column-wrapper {
+                background-color: #50d2c2;
+            }
+        }
+    }
+    .column-wrapper {
+        background-color: $primary-color;
+        @include margin(20px);
+        @include padding(15px);
+        color: $white-color;
+        border-radius: 6px;
+    }
+}
+
+.ngo-list {
+    @include marginTop(70px);
+    width: calc(100% - 180px);
+    margin-right: 0;
+    margin-left: auto;
+    
+    h2 {
+        padding-top: 35px;
+    }
+
+    .row {
+        @include marginTop(70px);
+    }
+
+    .column-wrapper {
+        @include margin(25px 0);
+        .card {
+            .card-title {
+                margin-bottom: 20px;
+
+                a {
+                    color: #0000FF;
+                    font-weight: $bold-font;
+                 
+                }
+            }
+            .card-text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.register-section {
+    padding-top: 100px;
+
+    .row {
+        padding-top: 30px;
+    }
+
+    .column-wrapper {
+        min-height: 300px;
+        position: relative;
+        border-radius: 8px;
+        
+        background-position: center;
+        background-size: cover;
+        
+        &.user-section {
+            background-image: url("../img/user.webp");
+        }
+        
+        &.ngo-section {
+            background-image: url("../img/signup-ngo.webp");
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(85, 85, 85, 0.36);
+        } 
+
+        a {
+            position: relative;
+        }
+    }
+}
+
+.login-section {
+    position: static;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.modal-login {
+    color: #636363;
+    max-width: 500px;
+    width: 100% !important;
+    box-shadow: 0 3px 7px #ccc;
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 26px;
+    }
+    i {
+        position: absolute;
+        left: 13px;
+        top: 11px;
+        font-size: 18px;
+    }
+    .form-group {
+        position: relative;
+    }
+    .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+    }
+    .form-control {
+        padding-left: 40px;
+
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+    .hint-text {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .modal-footer {
+        background: #ecf0f1;
+        border-color: #dee4e7;
+        text-align: center;
+        margin: 0 -20px -20px;
+        border-radius: 5px;
+        font-size: 13px;
+        justify-content: center;
+
+        a {
+            color: #999;
+        }
+    }
+
+    .trigger-btn {
+        display: inline-block;
+        margin: 100px auto;
+    }
+    
+
+    .modal-header {
+        border-bottom: none;
+        position: relative;
+        justify-content: center;
+    }
+
+}
+
+.modal-login .btn {
+    background: $primary-color;
+    border: none;
+    line-height: normal;
+}
+
+
+.donate-section {
+    .sidenav {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #f2f3f8;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding: 100px 15px 0;
+
+        .form-group {
+            margin-bottom: 25px;
+
+            label {
+                font-weight: 600;
+            }
+        }
+
+        .btn-primary {
+            margin-right: 15px;
+        }
+    }
+}
+
+.upcoming_event_area {
+    width: calc(100% - 180px);
+    margin-right: 0;
+    margin-left: auto;
+    
+    .single_time{
+        padding-right: 10px !important
+        ;
+        margin-right: 10px !important;
+    }
+}
+.bulgy-radios {
+  width: 38rem;
+  background: #fff;
+  padding: 3rem 0 3rem 5rem;
+  border-radius: 1rem;
+  
+  label {
+    display: block;
+    position: relative;
+    height: 1em;
+    padding-left: 4rem;
+    margin-bottom: 1.75rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    user-select: none;
+    color: #555;
+    letter-spacing: 1px;
+    &:hover input:not(:checked) ~ .radio {
+      opacity: 0.8;
+    }
+  }
+ 
+  input {
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    left: -2000px;
+
+    &:checked {
+      ~ .radio {
+        background-color: #0ac07d;
+        transition: background .3s;
+        &::after {
+          opacity: 1;
+        }
+      }
+   
+    }
+  }
+}
+.radio {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #c9ded6;
+  border-radius: 50%;
+  &::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: .5rem;
+    left: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+.information-section {
+    padding-top: 100px;
+
+    .information-wrapper {
+        margin-top: 35px;
+        padding: 35px;
+        background-color: #eee;
+        border-radius: 8px;
+
+        h3 {
+            margin-bottom: 25px;
+        }
+
+        .info-title {
+            font-size: 17px;
+            font-family: $semibold-font;
+            max-width: 400px !important;
+            width: 100%;
+        }
+    }
+}

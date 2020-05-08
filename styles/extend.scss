@@ -1,0 +1,91 @@
+/***
+  * write extedable class here
+ */
+%button {
+  @include button();
+}
+
+%light-grey-background {
+  background-color: #f2f2f2;
+}
+
+%no-margin {
+  @include margin(0);
+}
+
+%no-padding {
+  @include padding(0);
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%flex {
+  @include flex();
+}
+
+%flex-column {
+  @include flexDirection(column);
+}
+
+%flex-column-reverse {
+  @include flexDirection(column-reverse);
+}
+
+%flex-row {
+  @include flexDirection(row);
+}
+
+%flex-row-reverse {
+  @include flexDirection(row-reverse);
+}
+
+%flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+%justify-content-center {
+  @include justifyContent(center);
+}
+
+%justify-content-end {
+  @include justifyContent(flex-end);
+}
+
+%justify-content-start {
+  @include justifyContent(flex-start);
+}
+
+%justify-content-between {
+  @include justifyContent(space-between);
+}
+
+%align-items-center {
+  @include alignItems(center);
+}
+
+%align-items-end {
+  @include alignItems(flex-end);
+}
+
+%align-items-start {
+  @include alignItems(flex-start);
+}
+
+%object-fit-cover {
+  @include objectFitImg(cover);
+}
+
+%object-fit-contain {
+  @include objectFitImg(contain);
+}
+
+%object-fit-fill {
+  @include objectFitImg(fill);
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}

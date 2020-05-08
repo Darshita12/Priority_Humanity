@@ -1,0 +1,147 @@
+@mixin margin($value...) {
+  margin: $value;
+}
+
+@mixin marginTop($value) {
+  margin-top: $value;
+}
+
+@mixin marginBottom($value) {
+  margin-bottom: $value;
+}
+
+@mixin marginLeft($value) {
+  margin-left: $value;
+}
+
+@mixin marginRight($value) {
+  margin-right: $value;
+}
+
+@mixin padding($value...) {
+  padding: $value;
+}
+
+@mixin paddingTop($value) {
+  padding-top: $value;
+}
+
+@mixin paddingBottom($value) {
+  padding-bottom: $value;
+}
+
+@mixin paddingLeft($value) {
+  padding-left: $value;
+}
+
+@mixin paddingRight($value) {
+  padding-right: $value;
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flexDirection($value) {
+  @if $value == row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  } @else if $value == row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  } @else if $value == column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  } @else if $value == column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@mixin justifyContent($value) {
+  @if $value == center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  } @else if $value == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@mixin alignItems($value) {
+  @if $value == center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  } @else if $value == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+@mixin button() {
+  padding: 8px 19px;
+  background-color: $transparent;
+  border-radius: 0;
+  font-size: 14px;
+  border: 2px solid $primary-color;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  outline: none!important;
+  font-family: $semibold-font;
+  border-radius: 20px;
+  min-width: 150px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+@mixin buttonColor($value) {
+  border: 2px solid $value;
+  color: $value;
+
+  &:hover {
+    background-color: $value !important;
+    color: $white-color !important;
+  }
+}
+
+@mixin objectFitImg($value) {
+  @if $value == cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+  } @else if $value == contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+  } @else if $value == fill {
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+}

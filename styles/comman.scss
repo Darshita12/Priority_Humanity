@@ -1,0 +1,534 @@
+/***
+* write coman scss here
+*/
+.no-margin {
+  @extend %no-margin;
+}
+
+.no-padding {
+  @extend %no-padding;
+}
+
+.light-grey-background {
+  @extend %light-grey-background;
+}
+
+.pl-5 {
+  @include paddingLeft(5px);
+}
+
+.pl-10 {
+  @include paddingLeft(10px);
+}
+
+.pl-15 {
+  @include paddingLeft(15px);
+}
+
+.pl-20 {
+  @include paddingLeft(20px);
+}
+
+.pr-5 {
+  @include paddingRight(5px);
+}
+
+.pr-10 {
+  @include paddingRight(10px);
+}
+
+.pr-15 {
+  @include paddingRight(15px);
+}
+
+.pr-20 {
+  @include paddingRight(20px);
+}
+
+.pt-5 {
+  @include paddingTop(5px);
+}
+
+.pt-10 {
+  @include paddingTop(10px);
+}
+
+.pt-15 {
+  @include paddingTop(15px);
+}
+
+.pt-20 {
+  @include paddingTop(20px);
+}
+
+.pb-5 {
+  @include paddingBottom(5px);
+}
+
+.pb-10 {
+  @include paddingBottom(10px);
+}
+
+.pb-15 {
+  @include paddingBottom(15px);
+}
+
+.pb-20 {
+  @include paddingBottom(20px);
+}
+
+.ml-5 {
+  @include marginLeft(5px);
+}
+
+.ml-10 {
+  @include marginLeft(10px);
+}
+
+.ml-12 {
+  @include marginLeft(12px);
+}
+
+.ml-15 {
+  @include marginLeft(15px);
+}
+
+.ml-20 {
+  @include marginLeft(20px);
+}
+
+.mr-5 {
+  @include marginRight(5px);
+}
+
+.mr-10 {
+  @include marginRight(10px);
+}
+
+.mr-12 {
+  @include marginRight(12px);
+}
+
+.mr-15 {
+  @include marginRight(15px);
+}
+
+.mr-20 {
+  @include marginRight(20px);
+}
+
+.mt-5 {
+  @include marginTop(5px);
+}
+
+.mt-10 {
+  @include marginTop(10px);
+}
+
+.mt-15 {
+  @include marginTop(15px);
+}
+
+.mt-20 {
+  @include marginTop(20px);
+}
+
+.mb-5 {
+  @include marginBottom(5px);
+}
+
+.mb-10 {
+  @include marginBottom(10px);
+}
+
+.mb-15 {
+  @include marginBottom(15px);
+}
+
+.mb-20 {
+  @include marginBottom(20px);
+}
+
+.pointer {
+  @extend %cursor-pointer;
+}
+
+.flex {
+  @extend %flex;
+}
+
+.inline-block {
+  @extend %inline-block;
+}
+
+.flex-column {
+  @extend %flex-column;
+}
+
+.flex-column-reverse {
+  @extend %flex-column-reverse;
+}
+
+.flex-row {
+  @extend %flex-row;
+}
+
+.flex-row-reverse {
+  @extend %flex-row-reverse;
+}
+
+.flex-wrap {
+  @extend %flex-wrap;
+}
+
+.justify-content-center {
+  @extend %justify-content-center;
+}
+
+.justify-content-end {
+  @extend %justify-content-end;
+}
+
+.justify-content-start {
+  @extend %justify-content-start;
+}
+
+.justify-content-between {
+  @extend %justify-content-between;
+}
+
+.align-items-center {
+  @extend %align-items-center;
+}
+
+.align-items-end {
+  @extend %align-items-end;
+}
+
+.align-items-start {
+  @extend %align-items-start;
+}
+
+.button {
+  @extend %button;
+  color: $primary-color;
+}
+
+.button-primary {
+  @extend %button;
+  // @include buttonColor($primary-color);
+  background-color: $primary-color;
+  color: $white-color;
+
+
+  &:hover {
+    background-color: $white-color;
+    color: $primary-color;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+.light-font {
+    font-family: $light-font;
+}
+.medium-font {
+    font-family: $medium-font;
+}
+.semibold-font {
+    font-family: $semibold-font;
+}
+.bold-font {
+    font-family: $bold-font;
+}
+
+.transparent-header {
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white-color;
+
+            &::before {
+              color: $white-color;
+            }
+
+            &:hover {
+              //nav-link hover
+              color: $white-color;
+
+              &::before {
+                opacity: 1;
+                -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+              }
+            }
+          }
+
+          &.active {
+            //this show which page is active
+            .nav-link {
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.grey-header {
+  background-color: $grey-color !important;
+
+  .navbar {
+    background-color: rgba(242,243,248,1);
+
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          &.active {
+            .nav-link {
+              color: $primary-color;
+            }
+          }
+
+          .nav-link {
+            color: #4E4E4E;
+
+            &:hover {
+              //nav-link hover
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  // display: none;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(64, 64, 65, 0.9);
+
+  &.overlay-show {
+    height: 100vh;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    line-height: 20px;
+    right: -100vw;
+    height: 100%;
+    width: 0;
+    -webkit-transition: $main-transition;
+    transition: $main-transition;
+    top: 0;
+
+    &.navbar-collapse-show {
+      // for responsive header
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background-color: $white-color;
+
+      .close-button {
+        display: block;
+
+        svg {
+          width: 15px;
+        }
+      }
+
+      .navbar-nav {
+        @include paddingTop(50px);
+        height: 100%;
+      }
+    }
+
+    .close-button {
+      //sidemenu close button
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      font-size: 18px;
+    }
+
+    .navbar-nav {
+      .nav-item {
+        &.active {
+          //this show which page is active
+          .nav-button,
+          .nav-link {
+            color: $primary-color;
+
+            &::before {
+              color: $primary-color;
+            }
+          }
+        }
+
+        .nav-button,
+        .nav-link {
+          color: #4E4E4E;
+
+          &::before {
+            color: #4E4E4E;
+          }
+
+          &:hover {
+            //nav-link hover
+            &::before {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  .navbar-nav {
+    .nav-item {
+      @include margin(0 10px);
+      @include padding(8px);
+
+      &:hover {
+        .dropdown {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+
+      .dropdown-item {
+        font-family:  $bold-font;
+        color: #4E4E4E;
+
+        &.active {
+          color: $white-color;
+          background-color: $primary-color!important;
+        }
+
+        &:hover {
+          color: $white-color;
+          background-color: $primary-color;
+        }
+      }
+
+      &.active {
+        //this show which page is active
+        .nav-link {
+          color: $primary-color;
+
+          &::before {
+            opacity: 1 !important;
+            -webkit-transform: translateY(5px) !important;
+            transform: translateY(5px) !important;
+          }
+        }
+      }
+
+      .dropdown {
+        button {
+          background: transparent;
+          border: none;
+          font-size: 13px;
+          text-transform: uppercase;
+          outline: none;
+        }
+
+        .dropdown-menu {
+          font-size: 14px;
+          position: absolute!important;
+          top: 30px;
+
+          &.show {
+            display: block!important;
+          }
+        }
+      }
+
+      .nav-button,
+      .nav-link {
+        position: relative;
+        display: inline-block;
+        @include padding(0);
+        font-size: 13px;
+        font-family: $bold-font;
+
+        &::before {
+          //on hover underline effect
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-bottom: 2px solid;
+          opacity: 0;
+          -webkit-transition: $main-transition;
+          transition: $main-transition;
+          -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+        }
+
+        &:hover {
+          //nav-link hover
+          color: $primary-color;
+
+          &::before {
+            opacity: 1;
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 4;
+  -webkit-transition: $main-transition;
+  transition: $main-transition;
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .navbar {
+    height: 100%;
+
+    .navbar-toggler {
+      border-color: rgba(0, 0, 0, 0)!important;
+      outline: none;
+      height: 100%;
+      width: 35px;
+      @include padding(0);
+      @include marginRight(15px);
+    }
+  }
+}
